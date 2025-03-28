@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Trooplo Software Solutions | Custom Software Development</title>
+    <meta name="description" content="Trooplo Software Solutions offers tailored software development services including web development, mobile apps, cloud solutions, and more. Contact us for innovative technology solutions in Calicut, Kerala.">
+    <meta name="keywords" content="Trooplo Software Solutions, Trooplo, trooplo, custom software development, web development, mobile app development, cloud solutions, business analysis, security solutions, software company Kerala, Calicut software development">
+    <meta name="author" content="Trooplo Software Solutions">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Trooplo Software Solutions | Custom Software Development">
+    <meta property="og:description" content="Discover expert software solutions at Trooplo. Specializing in web, mobile, cloud, and security services to transform your business. Based in Calicut, Kerala.">
+    <meta property="og:image" content="https://trooplo.online/logo/logo.svg">
+    <meta property="og:url" content="https://trooplo.online">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Trooplo Software Solutions">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F2C59',
+                        secondary: '#1F4172',
+                        accent: '#F9B572',
+                        dark: '#192655',
+                        light: '#F8FAFC',
+                        gray: {
+                            100: '#F5F7FA',
+                            200: '#E4E7EB',
+                            300: '#CBD2D9',
+                            400: '#9AA5B1',
+                            500: '#7B8794',
+                            600: '#616E7C',
+                            700: '#4A5568',
+                            800: '#323F4B',
+                            900: '#1F2933',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['IBM Plex Sans', 'sans-serif'],
+                        heading: ['IBM Plex Serif', 'serif'],
+                    },
+                    transitionDuration: {
+                        '400': '400ms',
+                    },
+                    transitionTimingFunction: {
+                        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- EmailJS Integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "3NHIzAw-fdHVMKnU9",
+            });
+        })();
+    </script>
+
+    <!-- Structured Data (JSON-LD) for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Trooplo Software Solutions",
+        "url": "https://trooplo.online",
+        "logo": "https://trooplo.online/logo/logo-light.svg",
+        "description": "Trooplo Software Solutions provides custom software development services including web development, mobile apps, cloud solutions, and security services in Calicut, Kerala.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Calicut",
+            "addressRegion": "Kerala",
+            "postalCode": "673001",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@trooplo.online",
+            "contactType": "Customer Service"
+        },
+        "sameAs": [
+            "https://facebook.com/trooplo",
+            "https://instagram.com/trooplo"
+        ]
+    }
+    </script>
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Accounts for fixed header */
+        }
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        .heading {
+            font-family: 'IBM Plex Serif', serif;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .navbar {
+            transition: all 0.4s ease-in-out;
+        }
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+        .navbar.visible {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-light text-gray-800">
+    
+    <!-- Fixed Navigation (appears after hero) -->
+    <nav id="navbar" class="navbar hidden fixed top-0 left-0 right-0 z-50 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <img src="logo/logo.svg" alt="Trooplo Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#services" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Services</a>
+                    <a href="#process" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Our Process</a>
+                    <a href="#about" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#contact" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+                    <a href="#get-started" class="font-medium px-5 py-2 bg-primary text-white rounded hover:bg-secondary transition-all duration-300">Get Started</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-primary" aria-label="Menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Services</a>
+                <a href="#process" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Our Process</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Contact</a>
+                <a href="#get-started" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-100">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="home" class="bg-[url('img/dddepth-242.jpg')] bg-cover text-white py-24 md:py-32">
+        <div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Logo div with order-first for mobile and order-last for md+ screens -->
+                <div class="md:w-1/2 flex justify-center animate-slide-up order-first md:order-last">
+                    <img src="logo/logo-light.svg" alt="Trooplo Logo" class="h-64 md:h-72 lg:h-80">
+                </div>
+                <!-- Content div with order-last for mobile and order-first for md+ screens -->
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in order-last md:order-first">
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Where Code Marches in Unison</h1>
+                    <p class="text-xl mb-10 text-gray-200 max-w-xl">At Trooplo, we excel at providing tailored software solutions that meet the unique challenges of our clients.</p>
+                    <div class="flex space-x-4">
+                        <a href="#services" class="font-medium px-8 py-4 bg-accent text-primary rounded hover:bg-white transition-all duration-300 ease-smooth">Our Services</a>
+                        <a href="#contact" class="font-medium px-8 py-4 border-2 border-white rounded hover:bg-white hover:text-primary transition-all duration-300 ease-smooth">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="section py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="font-heading text-4xl font-bold text-primary mb-4">Our Services</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">Experience seamless software development with Trooplo. We deliver tailored solutions that help you stay ahead in today's digital landscape.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+                <!-- Service Card 1 -->
+                <div class="bg-light p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-400 ease-smooth group">
+                    <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-primary">Web Development</h3>
+                    <p class="mb-6 text-gray-600">We create responsive, modern web applications tailored to your specific business requirements using cutting-edge technologies.</p>
+                    <ul class="mb-8 space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Custom Web Applications</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>E-commerce Solutions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Progressive Web Apps</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-light p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-400 ease-smooth group">
+                    <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-primary">Mobile App Development</h3>
+                    <p class="mb-6 text-gray-600">We build cross-platform mobile applications that deliver exceptional user experiences across all devices.</p>
+                    <ul class="mb-8 space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>iOS & Android Apps</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Cross-Platform Development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>App Store Optimization</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-light p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-400 ease-smooth group">
+                    <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-primary">Business Analysis</h3>
+                    <p class="mb-6 text-gray-600">Leveraging our deep industry knowledge, we perform comprehensive analysis tailored to your specific requirements.</p>
+                    <ul class="mb-8 space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Requirements Gathering</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Process Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Solution Architecture</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 4 -->
+<!-- Service Card 4 -->
+<div class="bg-light p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-400 ease-smooth group">
+    <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+        <i class="fas fa-cloud"></i>
+    </div>
+    <h3 class="font-heading text-2xl font-bold mb-4 text-primary">Cloud Solutions</h3>
+    <p class="mb-6 text-gray-600">We help businesses leverage cloud technologies to improve scalability, reduce costs, and enhance security.</p>
+    <ul class="mb-8 space-y-3 text-gray-700">
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Cloud Migration</span>
+        </li>
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Infrastructure Setup</span>
+        </li>
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>DevOps Implementation</span>
+        </li>
+    </ul>
+</div>
+
+<!-- Service Card 5 -->
+<div class="bg-light p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-400 ease-smooth group">
+    <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+        <i class="fas fa-database"></i>
+    </div>
+    <h3 class="font-heading text-2xl font-bold mb-4 text-primary">Database Solutions</h3>
+    <p class="mb-6 text-gray-600">Design and implementation of efficient, secure, and scalable database systems for your business needs.</p>
+    <ul class="mb-8 space-y-3 text-gray-700">
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Database Architecture</span>
+        </li>
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Data Migration</span>
+        </li>
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Performance Optimization</span>
+        </li>
+    </ul>
+</div>
+
+<!-- Service Card 6 -->
+<div class="bg-light p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-400 ease-smooth group">
+    <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+        <i class="fas fa-shield-alt"></i>
+    </div>
+    <h3 class="font-heading text-2xl font-bold mb-4 text-primary">Security Solutions</h3>
+    <p class="mb-6 text-gray-600">Protect your digital assets with our comprehensive security services designed to safeguard your business.</p>
+    <ul class="mb-8 space-y-3 text-gray-700">
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Security Audits</span>
+        </li>
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Secure Development</span>
+        </li>
+        <li class="flex items-center">
+            <i class="fas fa-check text-secondary mr-3"></i>
+            <span>Vulnerability Assessment</span>
+        </li>
+    </ul>
+</div>
+</div>
+<div class="text-center mt-16">
+<a href="#get-started" class="font-medium inline-block px-8 py-4 bg-primary text-white rounded-lg hover:bg-secondary transition-all duration-300">Get Custom Solution</a>
+</div>
+</div>
+</section>
+
+<!-- Process Section -->
+<section id="process" class="section py-24 bg-light">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-20">
+<h2 class="font-heading text-4xl font-bold text-primary mb-4">Our Development Process</h2>
+<p class="max-w-2xl mx-auto text-lg text-gray-600">We follow a structured approach to ensure your project is delivered on time, within budget, and exceeds expectations.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Step 1 -->
+<div class="lg:w-1/4 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group relative">
+    <div class="absolute -top-5 -left-5 w-14 h-14 rounded-full bg-accent flex items-center justify-center text-primary font-heading font-bold text-xl group-hover:scale-110 transition-transform duration-300">1</div>
+    <h3 class="font-heading text-2xl font-bold mb-4 text-primary pt-4">Discovery</h3>
+    <p class="text-gray-600">We analyze your requirements and business goals to understand your vision completely.</p>
+    <div class="w-full h-1 bg-gray-200 mt-6 overflow-hidden">
+        <div class="w-1/4 h-full bg-accent group-hover:w-full transition-all duration-1000 ease-out"></div>
+    </div>
+</div>
+
+<!-- Step 2 -->
+<div class="lg:w-1/4 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group relative">
+    <div class="absolute -top-5 -left-5 w-14 h-14 rounded-full bg-accent flex items-center justify-center text-primary font-heading font-bold text-xl group-hover:scale-110 transition-transform duration-300">2</div>
+    <h3 class="font-heading text-2xl font-bold mb-4 text-primary pt-4">Planning</h3>
+    <p class="text-gray-600">We create a detailed roadmap with timelines, milestones, and resource allocation.</p>
+    <div class="w-full h-1 bg-gray-200 mt-6 overflow-hidden">
+        <div class="w-1/4 h-full bg-accent group-hover:w-full transition-all duration-1000 ease-out"></div>
+    </div>
+</div>
+
+<!-- Step 3 -->
+<div class="lg:w-1/4 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group relative">
+    <div class="absolute -top-5 -left-5 w-14 h-14 rounded-full bg-accent flex items-center justify-center text-primary font-heading font-bold text-xl group-hover:scale-110 transition-transform duration-300">3</div>
+    <h3 class="font-heading text-2xl font-bold mb-4 text-primary pt-4">Development</h3>
+    <p class="text-gray-600">Our experts build your solution using the latest technologies and best practices.</p>
+    <div class="w-full h-1 bg-gray-200 mt-6 overflow-hidden">
+        <div class="w-1/4 h-full bg-accent group-hover:w-full transition-all duration-1000 ease-out"></div>
+    </div>
+</div>
+
+<!-- Step 4 -->
+<div class="lg:w-1/4 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group relative">
+    <div class="absolute -top-5 -left-5 w-14 h-14 rounded-full bg-accent flex items-center justify-center text-primary font-heading font-bold text-xl group-hover:scale-110 transition-transform duration-300">4</div>
+    <h3 class="font-heading text-2xl font-bold mb-4 text-primary pt-4">Delivery</h3>
+    <p class="text-gray-600">We deploy your solution and provide training and ongoing support as needed.</p>
+    <div class="w-full h-1 bg-gray-200 mt-6 overflow-hidden">
+        <div class="w-1/4 h-full bg-accent group-hover:w-full transition-all duration-1000 ease-out"></div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Technology Stack -->
+<section class="section py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="font-heading text-4xl font-bold text-primary mb-4">Our Technology Stack</h2>
+<p class="max-w-2xl mx-auto text-lg text-gray-600">We use cutting-edge technologies to build robust, scalable, and efficient solutions.</p>
+</div>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-12 text-center">
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-react text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">React</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-node-js text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">Node.js</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-python text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">Python</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-aws text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">AWS</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-angular text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">Angular</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-docker text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">Docker</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-android text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">Android</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-apple text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">iOS</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-vuejs text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">Vue.js</span>
+</div>
+<div class="flex flex-col items-center group">
+    <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+        <i class="fab fa-java text-4xl text-accent"></i>
+    </div>
+    <span class="font-medium">Java</span>
+</div>
+    <div class="flex flex-col items-center group">
+        <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+            <i class="fab fa-php text-4xl text-accent"></i>
+        </div>
+        <span class="font-medium">PHP</span>
+    </div>
+    <div class="flex flex-col items-center group">
+        <div class="h-16 w-16 flex items-center justify-center rounded-lg bg-light mb-4 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+            <i class="fab fa-laravel text-4xl text-accent"></i>
+        </div>
+        <span class="font-medium">Laravel</span>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section py-24 bg-light">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+    <div class="lg:w-1/2">
+        <div class="relative group">
+            <div class="relative overflow-hidden rounded-lg shadow-xl">
+                <img src="img/work.webp" alt="Team working" class="rounded-lg transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:w-1/2">
+        <h2 class="font-heading text-4xl font-bold text-primary mb-6">About Trooplo</h2>
+        <p class="text-gray-600 mb-4 leading-relaxed">Trooplo is a forward-thinking software development startup dedicated to helping businesses leverage technology to achieve their goals. We believe in creating solutions that are not just functional but also intuitive and scalable.</p>
+        <p class="text-gray-600 mb-8 leading-relaxed">Our mission is to provide tailored software solutions that meet the unique challenges of our clients. We understand that every business has different needs, and we're committed to delivering solutions that address those specific requirements.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+            <div class="flex items-start group">
+                <div class="mr-4 text-accent text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Client-Focused</h3>
+                    <p class="text-gray-600">We prioritize your needs and goals above all else.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start group">
+                <div class="mr-4 text-accent text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Innovative</h3>
+                    <p class="text-gray-600">We stay at the cutting edge of technology.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start group">
+                <div class="mr-4 text-accent text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Agile Methodology</h3>
+                    <p class="text-gray-600">Flexible, adaptive approach to project management.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start group">
+                <div class="mr-4 text-accent text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Dedicated Support</h3>
+                    <p class="text-gray-600">We're with you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section id="get-started" class="section py-24 bg-secondary text-white bg-[url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-blend-multiply">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
+<p class="text-xl mb-10 max-w-3xl mx-auto">Let's work together to build software solutions that drive your business forward. Contact us today to get started.</p>
+<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+    <a href="#contact" class="font-medium px-8 py-4 bg-accent text-primary rounded hover:bg-white transition-all duration-300 ease-smooth">Get in Touch</a>
+    <a href="#services" class="font-medium px-8 py-4 border-2 border-white rounded hover:bg-white hover:text-primary transition-all duration-300 ease-smooth">Explore Services</a>
+</div>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section py-24 bg-white">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+    <h2 class="font-heading text-4xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+    <p class="text-lg text-gray-600">Find answers to some of the most common questions about our services and process.</p>
+</div>
+<div class="space-y-6">
+    <!-- FAQ Item 1 -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <button class="faq-toggle flex justify-between items-center w-full px-6 py-5 text-left font-heading font-semibold text-primary focus:outline-none">
+            <span class="text-lg">How long does it typically take to develop a custom application?</span>
+            <i class="fas fa-plus text-accent transition-transform duration-300"></i>
+        </button>
+        <div class="faq-content px-6 py-5 border-t border-gray-200 bg-light hidden">
+            <p class="text-gray-600">The timeline varies depending on the complexity and scope of the project. Simple applications may take 4-8 weeks, while more complex systems can take 3-6 months or more. During our initial consultation, we'll provide a more accurate timeline based on your specific requirements.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <button class="faq-toggle flex justify-between items-center w-full px-6 py-5 text-left font-heading font-semibold text-primary focus:outline-none">
+            <span class="text-lg">What is your development process?</span>
+            <i class="fas fa-plus text-accent transition-transform duration-300"></i>
+        </button>
+        <div class="faq-content px-6 py-5 border-t border-gray-200 bg-light hidden">
+            <p class="text-gray-600">We follow an agile development methodology that involves iterative development with regular client feedback. Our process includes discovery, planning, development, testing, deployment, and ongoing support. We believe in transparent communication throughout the entire process.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <button class="faq-toggle flex justify-between items-center w-full px-6 py-5 text-left font-heading font-semibold text-primary focus:outline-none">
+            <span class="text-lg">Do you provide ongoing support after the project is completed?</span>
+            <i class="fas fa-plus text-accent transition-transform duration-300"></i>
+        </button>
+        <div class="faq-content px-6 py-5 border-t border-gray-200 bg-light hidden">
+            <p class="text-gray-600">Yes, we offer various support and maintenance packages to ensure your application continues to run smoothly after launch. These can include bug fixes, security updates, performance optimization, and feature enhancements.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <button class="faq-toggle flex justify-between items-center w-full px-6 py-5 text-left font-heading font-semibold text-primary focus:outline-none">
+            <span class="text-lg">How do you handle project pricing?</span>
+            <i class="fas fa-plus text-accent transition-transform duration-300"></i>
+        </button>
+        <div class="faq-content px-6 py-5 border-t border-gray-200 bg-light hidden">
+            <p class="text-gray-600">We offer flexible pricing options including fixed-price quotes for well-defined projects and time-and-materials pricing for projects with evolving requirements. We'll work with you to find the most appropriate pricing model for your specific needs and budget.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <button class="faq-toggle flex justify-between items-center w-full px-6 py-5 text-left font-heading font-semibold text-primary focus:outline-none">
+            <span class="text-lg">What technologies do you specialize in?</span>
+            <i class="fas fa-plus text-accent transition-transform duration-300"></i>
+        </button>
+        <div class="faq-content px-6 py-5 border-t border-gray-200 bg-light hidden">
+            <p class="text-gray-600">We have expertise in a wide range of technologies including React, Angular, Vue.js, Node.js, Python, Java, PHP, and various mobile development frameworks. We choose the most appropriate technology stack based on your project's specific requirements and goals.</p>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section py-24 bg-light">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-heading text-4xl font-bold text-primary mb-6 text-center">Contact Us</h2>
+<p class="text-center max-w-3xl mx-auto mb-16 text-lg text-gray-600">Have a project in mind? Get in touch with us to see how we can help bring your ideas to life.</p>
+
+<div class="grid md:grid-cols-2 gap-16">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <form class="space-y-6" onsubmit="sendEmail(event)">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block mb-2 font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300">
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300">
+              </div>
+            </div>
+            <div>
+              <label for="subject" class="block mb-2 font-medium text-gray-700">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300">
+            </div>
+            <div>
+              <label for="message" class="block mb-2 font-medium text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your project" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"></textarea>
+            </div>
+            <button type="submit" class="w-full px-6 py-4 bg-primary text-white font-medium rounded hover:bg-secondary transition-all duration-300 ease-smooth">Send Message</button>
+          </form>
+    </div>
+    
+    <div>
+        <h3 class="font-heading text-2xl font-bold text-primary mb-8">Get in Touch</h3>
+        
+        <div class="space-y-8">
+            <div class="flex items-start group">
+                <div class="flex-shrink-0 h-14 w-14 rounded-lg bg-primary flex items-center justify-center text-white group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+                    <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div class="ml-5">
+                    <h4 class="font-heading font-bold text-lg">Our Location</h4>
+                    <p class="text-gray-600 mt-1">Calicut, Kerala, 673001</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start group">
+                <div class="flex-shrink-0 h-14 w-14 rounded-lg bg-primary flex items-center justify-center text-white group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+                    <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div class="ml-5">
+                    <h4 class="font-heading font-bold text-lg">Email Us</h4>
+                    <p class="text-gray-600 mt-1">info@trooplo.online</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start group">
+                <div class="flex-shrink-0 h-14 w-14 rounded-lg bg-primary flex items-center justify-center text-white group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+                    <i class="fas fa-clock text-xl"></i>
+                </div>
+                <div class="ml-5">
+                    <h4 class="font-heading font-bold text-lg">Working Hours</h4>
+                    <p class="text-gray-600 mt-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="font-heading text-xl font-bold text-primary mt-12 mb-5">Connect With Us</h3>
+        <div class="flex space-x-4">
+            <a href="#" class="h-12 w-12 rounded-lg bg-primary flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-all duration-300">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="h-12 w-12 rounded-lg bg-primary flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-all duration-300">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="h-12 w-12 rounded-lg bg-primary flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-all duration-300">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="h-12 w-12 rounded-lg bg-primary flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-all duration-300">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-12">
+    <div class="md:col-span-1">
+        <div class="flex items-center mb-6">
+            <img src="logo/logo-light.svg" alt="Trooplo Logo" class="h-16">
+        </div>
+        <p class="text-gray-300 mb-6">Where Code Marches in Unison. We deliver tailored software solutions that meet the unique challenges of our clients.</p>
+    </div>
+    
+    <div>
+        <h3 class="font-heading text-lg font-semibold mb-6">Quick Links</h3>
+        <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Home</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors duration-300">Services</a></li>
+            <li><a href="#process" class="text-gray-300 hover:text-accent transition-colors duration-300">Our Process</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-accent transition-colors duration-300">About Us</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-accent transition-colors duration-300">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div>
+        <h3 class="font-heading text-lg font-semibold mb-6">Services</h3>
+        <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Web Development</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Mobile App Development</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Business Analysis</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Cloud Solutions</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Security Solutions</a></li>
+        </ul>
+    </div>
+    
+    <div>
+        <h3 class="font-heading text-lg font-semibold mb-6">Newsletter</h3>
+        <p class="text-gray-300 mb-4">Subscribe to our newsletter to receive updates and tech insights.</p>
+        <form class="flex">
+            <input type="email" disabled placeholder="Your email" class="px-4 py-3 w-full rounded-l text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300">
+            <button type="submit" class="bg-accent text-primary px-5 py-3 rounded-r hover:bg-white transition-all duration-300">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-sm text-gray-400">© 2025 Trooplo Software Solutions. All rights reserved.</p>
+    <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors duration-300">Privacy Policy</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-accent transition-colors duration-300">Terms of Service</a>
+    </div>
+</div>
+</div>
+</footer>
+
+<!-- Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Scroll animation for sections
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+});
+
+// Scrolling navbar
+const navbar = document.getElementById('navbar');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Show navbar after hero section
+    if (scrollTop > window.innerHeight * 0.8) {
+        navbar.classList.add('visible');
+        navbar.classList.remove('hidden');
+    } else {
+        navbar.classList.remove('visible');
+        navbar.classList.add('hidden');
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    
+    if (mobileMenuButton.querySelector('i').classList.contains('fa-bars')) {
+        mobileMenuButton.querySelector('i').classList.replace('fa-bars', 'fa-times');
+    } else {
+        mobileMenuButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
+    }
+});
+
+// Mobile menu links (close menu when clicked)
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
+    });
+});
+
+// FAQ toggles
+document.querySelectorAll('.faq-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('i');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-content').forEach(item => {
+            if (item !== content && !item.classList.contains('hidden')) {
+                item.classList.add('hidden');
+                item.previousElementSibling.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+            }
+        });
+        
+        // Toggle current FAQ
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.classList.replace('fa-plus', 'fa-minus');
+        } else {
+            content.classList.add('hidden');
+            icon.classList.replace('fa-minus', 'fa-plus');
+        }
+    });
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-aio-3.2.6.min.js"></script>
+<script>
+    function sendEmail(event) {
+        event.preventDefault();
+
+        const serviceID = 'service_2snk64m';
+        const templateID = 'template_lh8yz6i';
+
+        const form = event.target;
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            subject: form.subject.value,
+            message: form.message.value
+        };
+
+        emailjs.send(serviceID, templateID, formData)
+            .then(response => {
+                console.log('Email sent successfully:', response);
+                Notiflix.Report.success(
+                    'Success!',
+                    'Your message has been sent successfully!',
+                    'OK'
+                );
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+                Notiflix.Report.failure(
+                    'Error!',
+                    'An error occurred while sending your message. Please try again later.',
+                    'Try Again'
+                );
+            });
+    }
+</script>
+</body>
+</html>
